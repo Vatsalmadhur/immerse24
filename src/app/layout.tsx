@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
 import NavbarComponent from "./Navbar/navbar";
+import { Box } from "@mui/material";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Immerse",
@@ -18,8 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <NavbarComponent />
+        <NavbarComponent />
+
+          <Box sx={{width:"100vw",height:"auto",minHeight:"90vh",display:"flex",justifyContent:"center",border:"2px solid red",marginTop:"65px"}}>
           {children}
+
+          </Box>
         </Providers>
       </body>
     </html>

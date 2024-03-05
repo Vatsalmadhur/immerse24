@@ -1,74 +1,103 @@
 "use client"
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { Link } from '@mui/material';
 
-export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Home",
-    "Events",
-    "Sponsors",
-  ];
+const drawerWidth = 240;
+const navItems = [{name:"Events",route:"/events"},{name:"Sponsors",route:"/sponsors"},{name:"Contact Us",route:"/contact"}];
+
+export default function DrawerAppBar() {
+
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        IMMERSE
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem  disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <Link href={item.route }> {item.name}</Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  // const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} style={{border:"2px solid red"}}>
-      <NavbarContent style={{border:"2px solid red",}} className="sm" >
-      <NavbarContent className="w-100" style={{border:"2px solid green"} }>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand >
-          {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit ">iMMERSE</p>
-        </NavbarBrand>
-      </NavbarContent>
+    <Box sx={{ display: 'flex',alignItems:"center",backgroundColor:"red", }}>
+      <CssBaseline />
+      <AppBar component="nav" sx={{ display: 'flex',alignItems:"center",position:"absolute  "}} >
+        <Toolbar sx={{border:"2px solid red",width:"75vw"}}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            IMMERSE
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Link href={item.route}>
+              <Button sx={{ color: '#fff' }}>
+                {item.name }
+              </Button>
+              </Link>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <nav>
+        <Drawer
+          // container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
 
-      <NavbarContent className=" sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="/about">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-      </NavbarContent>
-    </Navbar>
+    </Box>
   );
 }
