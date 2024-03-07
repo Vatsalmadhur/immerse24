@@ -6,7 +6,7 @@
 
 }
 .yellowBG{
-    background-color: #fbbc04;
+    background-color: #fddf84;
 
 }
 .redBG{
@@ -30,3 +30,9 @@
 .parallelogram{
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+.rubik{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+  }

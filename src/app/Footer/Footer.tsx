@@ -16,11 +16,9 @@ const Footer: React.FC = () => {
     <footer style={footerStyle}>
       <Container maxWidth="lg">
         <Stack direction="column" spacing={2} justifyContent="center" alignItems="center">
-          <Stack spacing={1} textAlign="center">
-            <Typography variant="h6" color="primary">
-              iMMERSE
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
+          <Stack spacing={1} justifyContent="center" alignItems="center">
+            <img src="/logo2.png" alt="" width="250px" />
+            <Typography fontSize="1.5rem" color="textSecondary">
               Google Developer Student Club-MMMUT
             </Typography>
           </Stack>
@@ -29,16 +27,16 @@ const Footer: React.FC = () => {
               Social Links
             </Typography> */}
             <Stack direction="row" spacing={1}>
-              <IconButton href="#" color="inherit">
+              <IconButton href="https://www.facebook.com/gdscmmmut" target='blank'  color="inherit">
                 <FacebookIcon />
               </IconButton>
-              <IconButton href="#" color="inherit">
+              <IconButton href="https://twitter.com/dscmmmut" target='blank'  color="inherit">
                 <TwitterIcon />
               </IconButton>
-              <IconButton href="#" color="inherit">
+              <IconButton href="https://in.linkedin.com/company/dscmmmut" target='blank'  color="inherit">
                 <LinkedInIcon />
               </IconButton>
-              <IconButton href="#" color="inherit">
+              <IconButton href="https://www.instagram.com/gdscmmmut/" target='blank' color="inherit">
                 <InstagramIcon />
               </IconButton>
             </Stack>
@@ -49,7 +47,7 @@ const Footer: React.FC = () => {
           {new Date().getFullYear()}
           {' iMMERSE. All rights reserved.'}
         </Typography>
-        <Typography align='center'>Made with by lorem</Typography>
+        <Typography align='center' >Made with ❤️ by <Link href="https://github.com/Vatsalmadhur">developerVatsal</Link></Typography>
       </Container>
     </footer>
   );

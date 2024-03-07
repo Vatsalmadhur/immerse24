@@ -8,16 +8,17 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { Box, Typography } from '@mui/material';
 
+
 export default function Schedule() {
   return (
     <Box sx={{width:"100%", height:"auto"}}>
     <Timeline position="alternate" >
       <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
+        <TimelineOppositeContent color="text.primary">
           DAY 1
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='success' />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
@@ -27,17 +28,17 @@ export default function Schedule() {
           2:00 pm onwards
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot  color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Argumented Reality Workshop</TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
+        <TimelineOppositeContent color="text.primary">
           DAY 2
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='success' />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
@@ -47,7 +48,7 @@ export default function Schedule() {
           9:00 am
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot  color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Informals</TimelineContent>
@@ -57,7 +58,7 @@ export default function Schedule() {
           09:30 am
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Project Exhibition</TimelineContent>
@@ -67,7 +68,7 @@ export default function Schedule() {
           10:00 am
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Tech Talk</TimelineContent>
@@ -77,34 +78,43 @@ export default function Schedule() {
           09:30 am
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Web Dev Workshop</TimelineContent>
       </TimelineItem>
-      
+
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-        
+
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='success' />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Day 3</TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
+        <TimelineOppositeContent color="text.primary">
           Hackathon
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>9:00 am</TimelineContent>
+        <TimelineContent color="text.secondary">9:00 am</TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent color="text.secondary">
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot color='error'/>
+        </TimelineSeparator>
+        <TimelineContent>End</TimelineContent>
       </TimelineItem>
     </Timeline>
     </Box>
   );
 }
-  
+

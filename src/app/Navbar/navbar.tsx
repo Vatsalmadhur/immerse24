@@ -18,7 +18,8 @@ import { Link } from '@mui/material';
 
 
 const drawerWidth = 240;
-const navItems = [{name:"Events",route:"/events"},{name:"Sponsors",route:"/sponsors"},{name:"Contact Us",route:"/contact"}];
+const navItems = [{ name: "Events", route: "/events" }, { name: "Sponsors", route: "/sponsors" }, { name: "Contact Us", route: "/contact" }];
+
 
 export default function DrawerAppBar() {
 
@@ -28,6 +29,7 @@ export default function DrawerAppBar() {
     setMobileOpen((prevState) => !prevState);
   };
 
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -36,49 +38,47 @@ export default function DrawerAppBar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem  disablePadding>
+          <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <Link href={item.route }> {item.name}</Link>
+              <Link href={item.route}> {item.name}</Link>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   );
-
-  // const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box sx={{ display: 'flex',alignItems:"center",backgroundColor:"red", }}>
+    <Box sx={{ display: 'flex', alignItems: "center" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ display: 'flex',alignItems:"center",position:"absolute  "}} >
-        <Toolbar sx={{border:"2px solid red",width:"75vw"}}>
+      <AppBar component="nav" className='yellowBG' sx={{ display: 'flex', alignItems: "center" }}  >
+        <Toolbar sx={{ width: { xs: "100vw", md: "75vw" }, display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
+          <Link href='/'><img src="./logo2.png" alt="iMMERSE" width="200px" height="auto" /></Link>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Link href={item.route}>
+                <Button >
+                  <Typography className='rubik' color="#000" fontSize="1rem">{item.name}</Typography>
+                </Button>
+              </Link>
+            ))}
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{
+              display: { sm: 'none' },
+              // position:"absolute",right:"0",top:"10px"
+            }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            IMMERSE
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Link href={item.route}>
-              <Button sx={{ color: '#fff' }}>
-                {item.name }
-              </Button>
-              </Link>
-            ))}
-          </Box>
+
+
+
         </Toolbar>
+
       </AppBar>
       <nav>
         <Drawer
@@ -97,7 +97,6 @@ export default function DrawerAppBar() {
           {drawer}
         </Drawer>
       </nav>
-
     </Box>
   );
 }
