@@ -31,16 +31,14 @@ export default function DrawerAppBar() {
 
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        IMMERSE
-      </Typography>
+    <Box className="yellowBG" onClick={handleDrawerToggle}  sx={{ textAlign: 'center',height:"100vh" }}>
+      <Box sx={{paddingY:2}}><Link href='/'><img src="./logo2.png" alt="iMMERSE" width="200px" height="auto" /></Link></Box>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <Link href={item.route}> {item.name}</Link>
+              <Link href={item.route}> <Typography variant='h6' color='black' className='rubik' sx={{textDecoration:"none"}}> {item.name}</Typography></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,18 +55,19 @@ export default function DrawerAppBar() {
             {navItems.map((item) => (
               <Link href={item.route}>
                 <Button >
-                  <Typography className='rubik' color="#000" fontSize="1rem">{item.name}</Typography>
+                  <Typography className='rubik' color="#000" fontSize="1.1rem">{item.name}</Typography>
                 </Button>
               </Link>
             ))}
           </Box>
           <IconButton
-            color="inherit"
+            // color="#000"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
               display: { sm: 'none' },
+              color:'black'
               // position:"absolute",right:"0",top:"10px"
             }}
           >

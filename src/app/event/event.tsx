@@ -2,7 +2,8 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-
+import { Heading } from '../Common/heading';
+import { Stack } from '@mui/material';
 
 const Item = styled(Paper)(({ theme, width, height }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#faa500',
@@ -10,13 +11,16 @@ const Item = styled(Paper)(({ theme, width, height }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  width: `${width}px`, 
-  height: `${height}px`, 
+  width: `${width}px`,
+  height: `${height}px`,
   margin: '0 auto',
 }));
 
 export default function Events() {
   return (
+    <>
+    <Stack width="100%" height="auto" alignItems="center" marginY={5}>
+    <Heading title="Events" />
     <Grid container spacing={0}>
       {[...Array(9)].map((_, index) => {
         // Customize sizes for the first and last items
@@ -34,6 +38,8 @@ export default function Events() {
         );
       })}
     </Grid>
+    </Stack>
+    </>
   );
 }
 

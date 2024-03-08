@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         <Stack direction="column" spacing={2} justifyContent="center" alignItems="center">
           <Stack spacing={1} justifyContent="center" alignItems="center">
             <img src="/logo2.png" alt="" width="250px" />
-            <Typography fontSize="1.5rem" color="textSecondary">
+            <Typography fontSize="1.5rem" color="textSecondary" textAlign="center">
               Google Developer Student Club-MMMUT
             </Typography>
           </Stack>

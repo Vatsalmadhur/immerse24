@@ -28,6 +28,7 @@ export default function RootLayout({
       </head>
       <body
       // className={rubik.variable}
+      style={{overflowX:"hidden"}}
       >
         <Providers>
           <NavbarComponent />

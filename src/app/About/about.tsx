@@ -1,10 +1,17 @@
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
+import { Heading } from '../Common/heading'
 
 export const About = () => {
   return (
-   <Stack width="100%" height="auto" alignItems="center" >
-    <Typography variant='h6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus veniam facere optio accusamus a quisquam obcaecati commodi, facilis illum, omnis eaque eos nemo deserunt alias libero incidunt ex. Inventore tenetur quos, delectus voluptatibus excepturi similique iste dolore, provident perspiciatis possimus eveniet et distinctio atque nulla. Accusamus eligendi nobis tempora consequatur doloremque nisi alias nam, sequi odio optio aliquid perferendis aperiam eum rerum quas saepe libero debitis, eos et corrupti! Nostrum quasi rem, debitis minus aperiam molestias reprehenderit labore voluptate velit, quae repudiandae, iusto commodi tempore repellendus sint animi dolorum praesentium. Aut eligendi sequi optio quod alias. Labore dolorem unde natus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a quae molestiae earum dolorem laudantium ipsam animi modi ducimus qui doloribus soluta mollitia, quia consectetur rem quam aperiam quod blanditiis voluptate dolor, ad reprehenderit assumenda nostrum? Necessitatibus alias facere provident incidunt ipsum reiciendis exercitationem quod dolorem in vero, ab, nulla pariatur, accusamus veritatis. In, ab neque sunt repellat maxime inventore nesciunt dolorum ad, saepe porro minima assumenda dolorem quisquam placeat unde tenetur dolores itaque voluptatibus soluta autem ipsa fuga facilis. Similique unde optio non quisquam itaque aspernatur quasi molestiae hic maxime dolor aperiam nobis blanditiis neque eos ex, tempora debitis.</Typography>
+   <Stack width="100%" height="auto" alignItems="center" marginY={5} >
+        <Heading title="About" />
+    <Typography variant='h6'>
+    GDSC is a Google Developers program for university students, designed to help them build their mobile and web development skills and knowledge. It is open to any student, ranging from novice developers who are just starting, to advanced developers who want to further their skills. It is intended to be a space for students to learn and collaborate as they solve mobile and web development problems.
+Google Developer Student Clubs (DSC) are community groups for students from any academic background in their undergraduate or graduate term. By joining a DSC, students build their professional and personal networks, get access to Google developer resources, and work together to build solutions for local problems in a peer-to-peer learning environment.
+</Typography>
+<Typography variant='h6' pt={2}>
+      Dive into the pulse-pounding excitement at IMMERSE : Where tech dreams become reality! 🌟 Brace yourself for a mind-bending journey through the cutting-edge, the extraordinary, and the downright awesome. Get ready to ride the wave of innovation, unleash your creativity, and make waves that'll ripple through eternity. Join us at Immerse and make your mark on the future!</Typography>
    </Stack>
   )
 }

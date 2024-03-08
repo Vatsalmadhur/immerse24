@@ -7,11 +7,13 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { Box, Typography } from '@mui/material';
-
+import { Heading } from '../Common/heading';
 
 export default function Schedule() {
   return (
     <Box sx={{width:"100%", height:"auto"}}>
+        <Heading title="Timeline" />
+
     <Timeline position="alternate" >
       <TimelineItem>
         <TimelineOppositeContent color="text.primary">
@@ -55,7 +57,7 @@ export default function Schedule() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          09:30 am
+          10:30 am
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color='error'/>
@@ -65,7 +67,7 @@ export default function Schedule() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          10:00 am
+          1:00 pm
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color='error'/>
@@ -75,7 +77,7 @@ export default function Schedule() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          09:30 am
+          03:00 pm
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color='error'/>
