@@ -18,7 +18,7 @@ import { Link } from '@mui/material';
 
 
 const drawerWidth = 240;
-const navItems = [{ name: "Events", route: "/events" }, { name: "Sponsors", route: "/sponsors" }, { name: "Contact Us", route: "/contact" }];
+const navItems = [{ name: "Events", route: "/eventdetail" }, { name: "Sponsors", route: "/sponsors" }, { name: "Contact Us", route: "/contact" }];
 
 
 export default function DrawerAppBar() {

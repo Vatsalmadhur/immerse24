@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import { Heading } from '../Common/heading';
 import { Stack } from '@mui/material';
 
+
 const Item = styled(Paper)(({ theme, width, height }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#faa500',
   ...theme.typography.body2,
@@ -21,7 +22,8 @@ export default function Events() {
     <>
     <Stack width="100%" height="auto" alignItems="center" marginY={5}>
     <Heading title="Events" />
-    <Grid container spacing={0}>
+
+    <Grid container spacing={0} width="800px">
       {[...Array(9)].map((_, index) => {
         // Customize sizes for the first and last items
         let size = { width: 100, height: 100 }; // Default size
@@ -33,7 +35,7 @@ export default function Events() {
 
         return (
           <Grid item xs={4} key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
-            <Item {...size}>  </Item>
+            <Item {...size}>Comming Soon  </Item>
           </Grid>
         );
       })}

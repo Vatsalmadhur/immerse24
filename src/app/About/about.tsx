@@ -11,7 +11,7 @@ export const About = () => {
 Google Developer Student Clubs (DSC) are community groups for students from any academic background in their undergraduate or graduate term. By joining a DSC, students build their professional and personal networks, get access to Google developer resources, and work together to build solutions for local problems in a peer-to-peer learning environment.
 </Typography>
 <Typography variant='h6' pt={2}>
-      Dive into the pulse-pounding excitement at IMMERSE : Where tech dreams become reality! 🌟 Brace yourself for a mind-bending journey through the cutting-edge, the extraordinary, and the downright awesome. Get ready to ride the wave of innovation, unleash your creativity, and make waves that'll ripple through eternity. Join us at Immerse and make your mark on the future!</Typography>
+Dive into the pulse-pounding excitement at IMMERSE: Where tech dreams become reality! 🌟 Brace yourself for a mind-bending journey through the cutting-edge, the extraordinary, and the downright awesome. Get ready to ride the wave of technology, unleash your creativity, and make waves that'll ripple through eternity. Join us at Immerse and make your mark on the future! 🚀 Embark on an exhilarating odyssey where imagination knows no bounds and innovation knows no limits. Don't just dream about the future – be a part of creating it at IMMERSE!</Typography>
    </Stack>
   )
 }
