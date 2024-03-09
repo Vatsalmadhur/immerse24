@@ -5,6 +5,17 @@ import ImmerseLogoPhone from '../Common/immerseLogoPhone'
 import ImmerseText from "../Common/immerseText";
 import ImmerseTextPhone from '../Common/immerseTextPhone'
 const Home = () => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
+
     const theme=useTheme()
   const screenSize=useMediaQuery('(min-width:600px)')
   return (

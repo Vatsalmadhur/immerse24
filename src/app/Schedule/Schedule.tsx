@@ -33,7 +33,7 @@ export default function Schedule() {
           <TimelineDot  color='error'/>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Argumented Reality Workshop</TimelineContent>
+        <TimelineContent> Workshop</TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.primary">

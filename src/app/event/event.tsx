@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 
 
-export default function Events() {
+export default function  Events() {
 
   const adjustedData = [
     { image: "/hackathon.svg", show: true },
