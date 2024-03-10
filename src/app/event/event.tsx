@@ -5,23 +5,10 @@ import { styled } from '@mui/material/styles';
 import { Heading } from '../Common/heading';
 import { Stack,Box, useMediaQuery, Button } from '@mui/material';
 import Link from 'next/link';
-
+import { adjustedData } from '../Common/data';
 
 
 export default function  Events() {
-
-  const adjustedData = [
-    { image: "/hackathon.svg", show: true },
-    { image: "/informals.svg", show: true },
-    { show: false },
-    { image: "/projectExhibition.svg", show: true },
-    { show: true },
-    { image: "/speakerSession.svg", show: true },
-    { show: false },
-    { image: "/workshop1.svg", show: true },
-    { image: "/workshop2.svg", show: true },
-  ];
-
   const Item = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(2),
     textAlign: 'center',

@@ -2,16 +2,16 @@ import React from "react";
 import Navigation from "../Common/Navigation";
 import EventCard from "../Common/EventCard";
 import { Box, Stack } from "@mui/material";
+import { eventDetails } from "../Common/data";
 export default function about(){
     return(
         <>
         <Stack justifyContent="center" alignItems="center">
-        <Box sx={{marginBottom:{xs:"30px",sm:"0"}}}><Navigation name="Events"/></Box>
-        <EventCard/>
-        <EventCard/>
-        <EventCard/>
-        <EventCard/>
-        <EventCard/>
+        <Box sx={{marginBottom:{xs:"30px",sm:"0"}}}><Navigation name="Events" fontColor="white" bgColorClass="lgtGreenBG"/></Box>
+
+        {eventDetails.map((item)=>(
+            <EventCard imgURL={item.imgURL} content={item.content} linkTo={item.linkTo} />
+        ))}
 
 
         </Stack>

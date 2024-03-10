@@ -1,6 +1,7 @@
 import { Box,Stack, CardContent, CardMedia, Typography, Button } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 interface props{
     imgURL:string,
@@ -14,10 +15,11 @@ const EventCard = (Props:props) => {
     <Box  className='lgtGreenBG'   sx={{width:{xl:"60vw",lg:"70vw",md:"80vw",sm:"90vw",xs:"90vw"},height:"auto" ,borderRadius:"10px",display:"flex", direction:"row" ,justifyContent:"space-around ",alignItems:"center",flexWrap:"wrap"}}  >
         <CardMedia image={Props.imgURL} sx={{height:{xs:"250px",md:"300px"},width:{xs:"250px",md:"300px"},border:"2px solid",
         position:"relative",bottom:{xs:"50px",sm:"100px",md:"50px"},borderRadius:"10px"}} className='greenBrdr'></CardMedia>
-        <CardContent sx={{width:{xs:"90vw",sm:"40vw"},minWidth:"300px",height:"auto"}}><Typography color="white">{Props.content}</Typography><Link href=''>  <Button variant='contained' size='small' color='primary'  sx={{mt:"10px"}}>Details</Button></Link></CardContent>
+        <CardContent sx={{width:{xs:"90vw",sm:"40vw"},minWidth:"300px",height:"auto"}}><Typography color="white">{Props.content}</Typography><Link href={Props.linkTo}>  <Button variant='contained' size='medium' color='primary'  sx={{mt:"10px"}}>Details<Box sx={{height:"26px"}}><KeyboardDoubleArrowRightIcon/></Box></Button></Link></CardContent>
 
         </Box>
     </Stack>
+
   )
 }
 

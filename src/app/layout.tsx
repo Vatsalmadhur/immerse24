@@ -5,7 +5,6 @@ import { Providers } from "./provider";
 import NavbarComponent from "./Navbar/navbar";
 import { Box } from "@mui/material";
 import Footer from "./Footer/Footer";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 // const rubik= Rubik({subsets:["latin"],variable:'--font-rubik'})
 export const metadata: Metadata = {
@@ -22,13 +21,8 @@ export default function RootLayout({
     <html lang="en"
     >
       <head>
-        {/* <style>
-          @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
-        </style> */}
-        {/* <script  async src="https://apply.devfolio.co/v2/sdk.js"></script> */}
       </head>
       <body
-      // className={rubik.variable}
       style={{overflowX:"hidden"}}
       >
         <Providers>

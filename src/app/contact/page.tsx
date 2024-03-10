@@ -1,8 +1,11 @@
 import React from 'react'
+import Navigation from '../Common/Navigation'
 
 const Contact = () => {
   return (
-    <div>Comming soon</div>
+   <>
+  <Navigation name="Contact Us" fontColor='black' bgColorClass='yellowBG' />
+   </>
   )
 }
 

@@ -21,8 +21,10 @@
     "@splinetool/runtime": "^1.0.57",
     "framer-motion": "^11.0.8",
     "next": "14.1.1",
+    "nextjs-toploader": "^1.6.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-loader-spinner": "^6.1.6"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Navigation from '../Common/Navigation'
+import SponsorCard from '../Common/SponsorCard'
 const Sponsors = () => {
   return (
-    <div>Comming soon</div>
+    <>
+    <Navigation name="Sponsors" fontColor='white' bgColorClass='blueBG' />
+    <SponsorCard/>
+    </>
   )
 }
 

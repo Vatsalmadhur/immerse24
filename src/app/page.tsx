@@ -5,22 +5,10 @@ import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import { About } from "./About/about";
 import Event from "./event/event";
 import Schedule from "@/app/Schedule/Schedule";
-import { useTheme } from "@emotion/react";
 import Home from "./Home/Home";
 
-// import '../globals.css'
-
 export default function App() {
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
+
   return (
     <>
       <Stack width="75vw"
