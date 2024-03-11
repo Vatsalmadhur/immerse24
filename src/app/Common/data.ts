@@ -21,3 +21,11 @@ export const adjustedData = [
     { image: "/workshop1.svg", show: true },
     { image: "/workshop2.svg", show: true },
   ];
+
+  export const sponsorData=[
+    {name:"The curry nights",for:"as out fooding partner",location:"https://www.google.com",imgURL:"meow"},
+    {name:"The curry nights",for:"as out fooding partner",location:"https://www.google.com",imgURL:"meow"},
+    {name:"The curry nights",for:"as out fooding partner",location:"https://www.google.com",imgURL:"meow"},
+
+
+  ]

@@ -5,36 +5,43 @@ import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ShareIcon from '@mui/icons-material/Share';
 import { CardContent } from '@mui/material';
+import Link from 'next/link';
 
-export default function SponsorCard() {
+
+interface props{
+  name:string,
+  for:string,
+  location:string,
+  imgURL:string
+}
+export default function SponsorCard(Props:props) {
   return (
-    <Card sx={{height:"400px"}}>
+    <Card className='blueBrdr' sx={{height:"400px",border:"2px solid",width:"350px"}}>
     <CardMedia
       component="img"
       height="200"
-      image="https://via.placeholder.com/400x200"
+      image={Props.imgURL}
       alt="Placeholder"
     />
-    <CardContent>
-      <Typography variant="h5" component="div">
-        Title of the Card
+    <CardContent sx={{textAlign:"center"}}>
+      <Typography variant="h4" component="div" className='rubik'>
+        {Props.name}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
-        Some description or content of the card.
+      <Typography variant="body1" color="#4285f4" className='rubik'>
+      {Props.for}
       </Typography>
     </CardContent>
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 16px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', padding: '0 16px'}}>
       <div>
-        <IconButton aria-label="location">
-          <LocationOnIcon />
+          <Link href={Props.location}>
+        <IconButton aria-label="location" >
+          <LocationOnIcon sx={{width:"50px",height:"50px"}} />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-      </div>
+          </Link>
     </div>
+    </div>
+
   </Card>
   );
 };

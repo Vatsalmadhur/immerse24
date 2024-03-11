@@ -48,7 +48,7 @@ export default function DrawerAppBar() {
   return (
     <Box sx={{ display: 'flex', alignItems: "center" }}>
       <CssBaseline />
-      <AppBar component="nav" className='yellowBG' sx={{ display: 'flex', alignItems: "center" }}  >
+      <AppBar component="nav" className='yellowBG'  sx={{ display: 'flex', alignItems: "center" }}  >
         <Toolbar sx={{ width: { xs: "100vw", md: "75vw" }, display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
           <Link href='/'><img src="./logo2.png" alt="iMMERSE" width="200px" height="auto" /></Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
