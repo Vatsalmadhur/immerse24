@@ -3,11 +3,13 @@ import React from "react";
 export const eventDetails=[
     {imgURL:'/hackathon.svg',
     content:' Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos tempora animi ipsam illo, cumque perferendis perspiciatis consequatur ea eligendi possimus et quibusdam odit, iusto, ipsa magni. Doloremque, dolorum. Excepturi eum voluptates provident! Esse a optio assumenda, quos voluptate sunt minima consectetur officiis sed! Beatae hic quis aspernatur libero aliquam?',
-    linkTo:'/sponsors'
+    linkTo:'/sponsors',
+    eventName:'hackathon'
     },
     {imgURL:'/hackathon.svg',
     content:' Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos tempora animi ipsam illo, cumque perferendis perspiciatis consequatur ea eligendi possimus et quibusdam odit, iusto, ipsa magni. Doloremque, dolorum. Excepturi eum voluptates provident! Esse a optio assumenda, quos voluptate sunt minima consectetur officiis sed! Beatae hic quis aspernatur libero aliquam?',
-    linkTo:''
+    linkTo:'',
+    eventName:'informals'
     }
 ]
 export const adjustedData = [
@@ -29,3 +31,8 @@ export const adjustedData = [
 
 
   ]
+
+export const eventNotice:Record<string, string>={
+  hackathon:'/hackathon.svg',
+  informals:'/informals.svg'
+}

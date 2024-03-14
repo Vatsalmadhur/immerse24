@@ -10,7 +10,7 @@ export default function about(){
         <Box sx={{marginBottom:{xs:"30px",sm:"0"}}}><Navigation name="Events" fontColor="white" bgColorClass="lgtGreenBG"/></Box>
 
         {eventDetails.map((item)=>(
-            <EventCard imgURL={item.imgURL} content={item.content} linkTo={item.linkTo} />
+            <EventCard data={item} />
         ))}
 
 

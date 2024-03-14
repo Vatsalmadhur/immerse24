@@ -4,6 +4,7 @@ import ImmerseLogo from '../Common/immerseLogo'
 import ImmerseLogoPhone from '../Common/immerseLogoPhone'
 import ImmerseText from "../Common/immerseText";
 import ImmerseTextPhone from '../Common/immerseTextPhone'
+import RegisterBtn from '../Common/registerBtn';
 const Home = () => {
   React.useEffect(() => {
     const script = document.createElement('script');
@@ -38,12 +39,7 @@ const Home = () => {
               <Typography width="auto" className="rubik" fontSize={{xs:'4rem',sm:"3rem",lg:'4rem',xl:"4rem"}} lineHeight={1.1} pb={2}>Embark on a thrilling Tech-Odyssey  at</Typography>
               <Box> {screenSize ? <ImmerseText/> : <ImmerseTextPhone/>} </Box>
               <Typography fontSize="2rem" width="auto" className="rubik" pt={2}>GDSC MMMUT's annual tech extravaganza!</Typography>
-              <div
-                className="apply-button"
-                data-hackathon-slug="gdscmmmut"
-                data-button-theme="light"
-                style={{ height: "44px", width: "312px " }}
-              > </div>
+            <RegisterBtn/>
             </Box>
             <Box
              sx={{
