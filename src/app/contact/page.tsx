@@ -23,11 +23,21 @@ const ContactUs = () => {
     setContactForm({ ...contactForm, [prop]: event.target.value });
   };
 
-  const handleSubmit = (event: FormEvent) => {
+  const  handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     // Logic to send form data goes here
     console.log(contactForm);
     alert('Form submitted. Check the console for details.');
+
+    const rawResponse = await fetch('/api/mailer', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(contactForm)
+    });
+    const content = await rawResponse.json();
   };
 
   return (
