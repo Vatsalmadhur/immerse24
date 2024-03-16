@@ -20,7 +20,7 @@ export default function SponsorCard(Props:props) {
     <Card className='blueBrdr' sx={{height:"400px",border:"2px solid",width:"350px"}}>
     <CardMedia><img src={Props.imgURL} alt="" width={350} height={200} /></CardMedia>
     <CardContent sx={{textAlign:"center"}}>
-      <Typography variant="h4" component="div" className='rubik'>
+      <Typography variant="h5" component="div" className='rubik'>
         {Props.name}
       </Typography>
       <Typography variant="body1" color="#4285f4" className='rubik'>
