@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Stack,
@@ -7,7 +8,6 @@ import {
   Button,
 } from "@mui/material";
 import Link from "next/link";
-import React from "react";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 interface props {
