@@ -27,7 +27,7 @@ const ContactUs = () => {
     event.preventDefault();
     // Logic to send form data goes here
     console.log(contactForm);
-    alert('Form submitted. Check the console for details.');
+    alert('Thank you for contacting us! We will reach to you soon');
 
     const rawResponse = await fetch('/api/mailer', {
       method: 'POST',

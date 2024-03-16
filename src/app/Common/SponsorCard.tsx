@@ -18,12 +18,7 @@ interface props{
 export default function SponsorCard(Props:props) {
   return (
     <Card className='blueBrdr' sx={{height:"400px",border:"2px solid",width:"350px"}}>
-    <CardMedia
-      component="img"
-      height="200"
-      image={Props.imgURL}
-      alt="Placeholder"
-    />
+    <CardMedia><img src={Props.imgURL} alt="" width={350} height={200} /></CardMedia>
     <CardContent sx={{textAlign:"center"}}>
       <Typography variant="h4" component="div" className='rubik'>
         {Props.name}
@@ -36,7 +31,7 @@ export default function SponsorCard(Props:props) {
       <div>
           <Link href={Props.location}>
         <IconButton aria-label="location" >
-          <LocationOnIcon sx={{width:"50px",height:"50px"}} />
+          <LocationOnIcon sx={{width:"40px",height:"40px"}} />
         </IconButton>
           </Link>
     </div>

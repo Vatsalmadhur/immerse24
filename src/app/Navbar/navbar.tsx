@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
-
+import RegisterBtn from '../Common/RegisterBtn';
 
 const drawerWidth = 240;
 const navItems = [{ name: "Events", route: "/eventdetail" }, { name: "Sponsors", route: "/sponsors" }, { name: "Contact Us", route: "/contact" }];
@@ -34,7 +34,7 @@ export default function DrawerAppBar() {
     <Box className="yellowBG" onClick={handleDrawerToggle}  sx={{ textAlign: 'center',height:"100vh" }}>
       <Box sx={{paddingY:2}}><Link href='/'><img src="./logo2.png" alt="iMMERSE" width="200px" height="auto" /></Link></Box>
       <Divider />
-      <List>
+      <List sx={{textAlign:'start'}}>
         {navItems.map((item) => (
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -42,6 +42,9 @@ export default function DrawerAppBar() {
             </ListItemButton>
           </ListItem>
         ))}
+        <Box ml={2} mt={1}><RegisterBtn/></Box>
+
+
       </List>
     </Box>
   );
@@ -51,14 +54,15 @@ export default function DrawerAppBar() {
       <AppBar component="nav" className='yellowBG'  sx={{ display: 'flex', alignItems: "center" }}  >
         <Toolbar sx={{ width: { xs: "100vw", md: "75vw" }, display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
           <Link href='/'><img src="./logo2.png" alt="iMMERSE" width="200px" height="auto" /></Link>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' },gap:"10px" }}>
             {navItems.map((item) => (
               <Link href={item.route}>
-                <Button >
+                <Button>
                   <Typography className='rubik' color="#000" fontSize="1.1rem">{item.name}</Typography>
                 </Button>
               </Link>
             ))}
+            <RegisterBtn/>
           </Box>
           <IconButton
             // color="#000"

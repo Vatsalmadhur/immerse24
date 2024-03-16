@@ -11,111 +11,130 @@ import { Heading } from '../Common/heading';
 
 export default function Schedule() {
   return (
-    <Box sx={{width:"100%", height:"auto"}}>
-        <Heading title="Timeline" />
+    <Box sx={{ width: "100%", height: "auto" }}>
+      <Heading title="Timeline" />
 
-    <Timeline position="alternate" >
-      <TimelineItem>
-        <TimelineOppositeContent color="text.primary">
-          DAY 1
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='success' />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          2:00 pm onwards
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot  color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent> Workshop</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.primary">
-          DAY 2
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='success' />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          9:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot  color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Informals</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          10:30 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Project Exhibition</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          1:00 pm
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Tech Talk</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          03:00 pm
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Web Dev Workshop</TimelineContent>
-      </TimelineItem>
+      <Timeline position="alternate" >
+        <TimelineItem>
+          <TimelineOppositeContent color="text.primary">
+            DAY 1
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='success' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            2:00 pm onwards
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>UI/UX and Web Workshop</TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.primary">
+            DAY 2
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='success' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
 
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
 
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='success' />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Day 3</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.primary">
-          Hackathon
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='error'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent color="text.secondary">9:00 am</TimelineContent>
-      </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            7:00 am
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>HackBlitz</TimelineContent>
+        </TimelineItem>
 
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color='error'/>
-        </TimelineSeparator>
-        <TimelineContent>End</TimelineContent>
-      </TimelineItem>
-    </Timeline>
+
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            9:00 pm
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>AI/ML Workshop</TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent color="text.primary">
+            DAY 3
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='success' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            7:00 am
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>Project Exhibition</TimelineContent>
+        </TimelineItem>
+
+
+        <TimelineItem>
+          <TimelineOppositeContent color="text.primary">
+            DAY 4
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='success' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            7:00 am
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>Informals</TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+            7:00 pm
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>SkillMafia workshop</TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color='error' />
+            {/* <TimelineConnector /> */}
+          </TimelineSeparator>
+          <TimelineContent>End</TimelineContent>
+        </TimelineItem>
+
+      </Timeline>
     </Box>
   );
 }

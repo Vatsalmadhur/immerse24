@@ -4,8 +4,8 @@ import { NextResponse } from "next/server";
 const  transporter = nodemailer.createTransport({
 	service:'gmail',
 	auth: {
-		user: "new email@gmail.com",
-		pass: "new pass",
+		user: "gdscmmmut012@gmail.com",
+		pass: "cnfukpgemecclovb",
 	}
 })
 
@@ -13,8 +13,8 @@ export async function POST(req:NextRequest){
     const body = await req.json();
     console.log(body);
     const mailOptions = {
-        from: "newemail@gmail.com",
-        to: "recievers@gmail.com",
+        from: "gdscmmmut012@gmail.com",
+        to: "bhartimadhur21@gmail.com",
         subject: "New message",
         html: `<h4>Name: ${body.name}</h4><h4>Email: ${body.email}</h4><h4>Message: ${body.message}</h4>`,
       };

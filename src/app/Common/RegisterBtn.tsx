@@ -10,6 +10,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CodeIcon from '@mui/icons-material/Code';
+import { Box, Link } from '@mui/material';
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -63,7 +64,7 @@ export default function registerBtn() {
   };
 
   return (
-    <div>
+    <Box>
       <Button
         id="demo-customized-button"
         aria-controls={open ? 'demo-customized-menu' : undefined}
@@ -73,6 +74,7 @@ export default function registerBtn() {
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
+
       >
         Register
       </Button>
@@ -85,26 +87,34 @@ export default function registerBtn() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={handleClose} disableRipple >
+          <Link href='https://forms.gle/PjQNaMomvQxvodYQ9'>
         <CodeIcon/>
           Web dev workshop
+          </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
+        <Link href='https://forms.gle/9Bfb6uoYrhqffuALA'>
         <CodeIcon/>
           UI/UX workshop(only MMMUT)
+          </Link>
         </MenuItem>
         {/* <Divider sx={{ my: 0.5 }} /> */}
         <MenuItem onClick={handleClose} disableRipple>
+          <Link href='https://forms.gle/7ZemnVx5MraauyKB7'>
           <CodeIcon/>
           HackBlitz
+          </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
         <CodeIcon/>
           AI/ML Speaker Session
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
+          <Link href='https://docs.google.com/forms/d/e/1FAIpQLScIu5ytpikTJyoJwZ9oF8O6l-Qjtl2UH38E_Qm7KQtCALTyBQ/viewform'>
         <CodeIcon/>
           Project Exhibition
+          </Link>
         </MenuItem> <MenuItem onClick={handleClose} disableRipple>
         <CodeIcon/>
          Informls(only MMMUT)
@@ -113,6 +123,6 @@ export default function registerBtn() {
          Workshop by Skillmafia
         </MenuItem>
       </StyledMenu>
-    </div>
+    </Box>
   );
 }

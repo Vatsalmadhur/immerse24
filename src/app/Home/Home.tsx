@@ -17,7 +17,7 @@ const Home = () => {
             className="yellowBG"
             paddingY={{xs:4,sm:5}}
             paddingX={{xl:10,lg:6,xs:2}}
-            borderRadius={20}
+            borderRadius={{xs:10,sm:20}}
             direction="row" alignItems="center" justifyContent={{xs:'center',sm:"space-evenly"}} flexWrap="wrap-reverse">
             <Box
             sx={{

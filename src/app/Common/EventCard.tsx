@@ -54,7 +54,7 @@ const EventCard = ({data}:{data:props})=> {
           }}
         >
           <Typography color="white">{data.content}</Typography>
-          <Link href={`/eventdetail/${data.eventName}`}>
+          {/* <Link href={`/eventdetail/${data.eventName}`}>
             {" "}
             <Button
               variant="contained"
@@ -67,7 +67,7 @@ const EventCard = ({data}:{data:props})=> {
                 <KeyboardDoubleArrowRightIcon />
               </Box>
             </Button>
-          </Link>
+          </Link> */}
         </CardContent>
       </Box>
     </Stack>
