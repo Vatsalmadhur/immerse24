@@ -49,6 +49,7 @@ export const adjustedData = [
     {name:"Madras Opticals",for:"as our eyewear",location:"https://maps.app.goo.gl/2Xy6Z4pzYoVSkCj77",imgURL:"/madrasoptical.jpg"},
     {name:"The Standard gifts",for:"as our gifting partner",location:"https://maps.app.goo.gl/HkMUwLBFfePnuLoD8",imgURL:"/tsg.jpeg"},
     {name:"Gambhir DryCleaners",for:"as our sponsor",location:"https://maps.app.goo.gl/cDsN118estzaf78HA",imgURL:"/gambhir.png"},
+    {name:"Meal Mitra",for:"as our fooding partner",location:"",imgURL:"/tiffin.png"},
 
 
   ]
